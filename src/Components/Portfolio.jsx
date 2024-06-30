@@ -5,7 +5,7 @@ import todolist from "../assets/todolist.png"
 import Weather from "../assets/Weather.png"
 import img from "../assets/img.png"
 import amazon from "../assets/amazon.png"
-
+import video from "../assets/video.jpeg"
 const Portfolio = () => {
     const portfolios = [
         {
@@ -43,6 +43,12 @@ const Portfolio = () => {
             src: amazon,
             codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/AmzoneClone',
             demoLink: 'https://web-dev-projects-oj5y-opp2v7bt5-debashis-projects-5a7f94cf.vercel.app'
+        },
+        {
+            id:7,
+            src:video,
+            codeLink:'https://github.com/pani2004/BackendProject',
+            demoLink:'#'
         }
     ]
 
