@@ -6,6 +6,7 @@ import Weather from "../assets/Weather.png"
 import img from "../assets/img.png"
 import amazon from "../assets/amazon.png"
 import video from "../assets/video.jpeg"
+import home from "../assets/home.jpeg"
 const Portfolio = () => {
     const portfolios = [
         {
@@ -46,10 +47,17 @@ const Portfolio = () => {
         },
         {
             id:7,
+            src:home,
+            codeLink:'https://github.com/pani2004/Mern-Estate',
+            demoLink:'https://mern-estate-932i.onrender.com'
+        },
+        {
+            id:8,
             src:video,
             codeLink:'https://github.com/pani2004/BackendProject',
             demoLink:'#'
-        }
+        },
+        
     ]
 
     return (
