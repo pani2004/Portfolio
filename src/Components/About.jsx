@@ -10,16 +10,11 @@ const About = () => {
                 </p>
             </div>
             <p className="text-xl mt-20">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, officiis! Nulla dolores odit necessitatibus, 
-                dignissimos reiciendis esse obcaecati, mollitia excepturi maxime autem aliquam repellendus nobis repellat.
-                 Sequi nesciunt, quas repellat qui hic nostrum accusantium quia quod necessitatibus alias! Dignissimos voluptate id minima at 
-                 officiis error vel nihil cupiditate nobis rerum.
+            Hello! I'm Debashis Pani, a B.Tech student in Information Technology (5th semester), with a passion for open-source contributions and web development. Recently, I participated in the GirlScript Summer of Code (GSSoC'24), where I secured an All India Rank of 78, with 49 merged PRs. I am proficient in the MERN stack, AWS, and have experience working with tools like Kafka and Nginx.
             </p>
             <br />
             <p className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam architecto recusandae molestias quibusdam aliquid nemo 
-                aperiam sit doloribus, perspiciatis, odio magni alias aliquam molestiae. Inventore blanditiis laudantium maxime optio suscipit nobis praesentium facilis deleniti consequatur 
-                reiciendis id nostrum voluptatum excepturi dolorem odio quaerat eum doloribus possimus, corporis vitae. Alias!
+            I'm actively involved in the AWS Cloud Club and CyberPeace Corps societies at my college, contributing to the web teams of both. Currently, I’m working on developing a PACS server to aid radiologists in the healthcare sector, combining my interest in technology and its real-world applications.
             </p>
         </div>
     </div>

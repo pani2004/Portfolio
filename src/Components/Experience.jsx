@@ -8,7 +8,8 @@ import express from '../assets/express.png'
 import mongo from '../assets/mongo.png'
 import node from '../assets/node.png'
 import Github from '../assets/Github.png'
-
+import aws from '../assets/aws.png'
+import kafka from '../assets/kafka.png'
 const Experience = () => {
     const techs = [
         {
@@ -64,6 +65,18 @@ const Experience = () => {
             src: Github,
             title: 'GitHub',
             style: 'shadow-gray-400'
+        },
+        {
+            id:10,
+            src:aws,
+            title:'AWS',
+            style:'shadow-yellow-500'
+        },
+        {
+            id:11,
+            src:kafka,
+            title:'Kafka',
+            style:'shadow-gray-500'
         }
     ]
 
@@ -72,7 +85,7 @@ const Experience = () => {
             <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
                 <div>
                     <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
-                    <p className='py-6'>These are the Technologies I have worked with</p>
+                    <p className='py-6 mt-2'>These are the Technologies I have worked with</p>
                 </div>
 
                 <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
