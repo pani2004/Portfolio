@@ -10,6 +10,8 @@ import node from '../assets/node.png'
 import Github from '../assets/Github.png'
 import aws from '../assets/aws.png'
 import kafka from '../assets/kafka.png'
+import Nginx from '../assets/Nginx.png'
+import Redis from '../assets/redis.png'
 const Experience = () => {
     const techs = [
         {
@@ -77,6 +79,18 @@ const Experience = () => {
             src:kafka,
             title:'Kafka',
             style:'shadow-gray-500'
+        },
+        {
+            id:12,
+            src:Nginx,
+            title:'Nginx',
+            style:'shadow-green-500'
+        },
+        {
+            id:13,
+            src:Redis,
+            title:'Redis',
+            style:'shadow-red-500'
         }
     ]
 

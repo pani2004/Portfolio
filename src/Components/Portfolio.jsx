@@ -7,6 +7,8 @@ import img from "../assets/img.png"
 import amazon from "../assets/amazon.png"
 import video from "../assets/video.jpeg"
 import home from "../assets/home.jpeg"
+import Pacs from "../assets/Pacs.png"
+import WebScraping from "../assets/WebScraping.png"
 const Portfolio = () => {
     const portfolios = [
         {
@@ -57,6 +59,18 @@ const Portfolio = () => {
             codeLink:'https://github.com/pani2004/BackendProject',
             demoLink:'#'
         },
+        {
+            id:9,
+            src:WebScraping,
+            codeLink:'https://github.com/pani2004/Price-Automation',
+            demoLink:'#'
+        },
+        {
+           id:10,
+           src:Pacs,
+           codeLink:'Coming soon to a GitHub repository near you',
+           demoLink:'Demo is top secret for now! Stay tuned.'
+        }
         
     ]
 
