@@ -68,8 +68,8 @@ const Portfolio = () => {
         {
            id:10,
            src:Pacs,
-           codeLink:'Coming soon to a GitHub repository near you',
-           demoLink:'Demo is top secret for now! Stay tuned.'
+        //    codeLink:'Coming soon to a GitHub repository near you',
+           demoLink:'https://skypacs.in/'
         }
         
     ]
