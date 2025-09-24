@@ -5,6 +5,7 @@ import javascript from '../assets/javascript.png'
 import reactImage from '../assets/reactImage.png'
 import cpp from '../assets/cpp.png'
 import express from '../assets/express.png'
+import Postgres from '../assets/Postgres.jpeg'
 import mongo from '../assets/mongo.png'
 import node from '../assets/node.png'
 import Github from '../assets/Github.png'
@@ -48,60 +49,66 @@ const Experience = () => {
         },
         {
             id: 6,
+            src: Postgres,
+            title: 'PostgreSQL',
+            style: 'shadow-blue-400'
+        },
+        {
+            id: 7,
             src: mongo,
             title: 'MongoDB',
             style: 'shadow-green-500'
         },
         {
-            id: 7,
+            id: 8,
             src: node,
             title: 'NodeJs',
             style: 'shadow-green-400'
         },
         {
-            id: 8,
+            id: 9,
             src: cpp,
             title: 'C++',
             style: 'shadow-blue-800'
         },
         {
-            id: 9,
+            id: 10,
             src: Github,
             title: 'GitHub',
             style: 'shadow-gray-400'
         },
         {
-            id:10,
+            id:11,
             src:aws,
             title:'AWS',
             style:'shadow-yellow-500'
         },
         {
-            id:11,
+            id:12,
             src:kafka,
             title:'Kafka',
             style:'shadow-gray-500'
         },
         {
-            id:12,
+            id:13,
             src:Nginx,
             title:'Nginx',
             style:'shadow-green-500'
         },
         {
-            id:13,
+            id:14,
             src:Redis,
             title:'Redis',
             style:'shadow-red-500'
         },
         {
-            id:14,
+            id:15,
             src:docker,
             title:'Docker',
             style:'shadow-blue-500'
         },
         {
-            id:15,
+            id:16,
             src:Spring,
             title:'Spring Boot',
             style:'shadow-green-600'
