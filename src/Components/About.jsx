@@ -10,15 +10,19 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-15">
-          Hello! I'm Debashis Pani, a B.Tech student in Information Technology (5th semester), with a passion for open-source contributions and web development. Recently, I participated in the GirlScript Summer of Code (GSSoC'24), where I secured an All India Rank of 78, with 49 merged PRs. I am proficient in the MERN stack, AWS, and have experience working with tools like Kafka and Nginx.
+          I'm Debashis Pani, a backend-focused full-stack developer passionate about building scalable and meaningful software systems. I'm currently pursuing a B.Tech in Information Technology at KIIT, graduating in 2026, and have gained hands-on experience through impactful internships and national-level hackathons.
         </p>
         <br />
         <p className="text-xl">
-          I'm actively involved in the AWS Cloud Club and CyberPeace Corps societies at my college, contributing to the web teams of both. Currently, I’m working on developing a PACS server to aid radiologists in the healthcare sector, combining my interest in technology and its real-world applications.
+          During my internship at Remodel AI, I worked on a real-time AI voice communication platform using OpenAI APIs, WebSockets, and Twilio, gaining practical experience in building reliable, low-latency backend systems. At NTRO, I was involved in full-stack development using React, FastAPI, Laravel, PostgreSQL, and Docker for a high-security backend project under a strict NDA.
         </p>
         <br />
         <p className="text-xl">
-          I am proud to share that I’ve been selected as a Smart India Hackathon 2024 Grand Finalist, representing my team in this prestigious national-level hackathon. This milestone reflects my commitment to solving real-world problems through innovative technological solutions.
+          As the Tech Lead and Grand Finalist at Smart India Hackathon 2024, I led a team to build Market Scout, a scalable price comparison platform leveraging Redis caching and Playwright scraping. I've also built a Patient Management System in microservice architecture using Spring Boot, gRPC, Kafka, Docker, and PostgreSQL, implementing modular services for patient records, billing, and analytics.
+        </p>
+        <br />
+        <p className="text-xl">
+          Additionally, I developed SKYPACS, a PACS system for DICOM medical images deployed on my home server using Docker, Nginx, GitHub Actions, and AWS EC2. Other MERN stack projects include a real estate platform, Market Scout (price comparison engine), and a commenting system. My core skills include Node.js, Express.js, React, Spring Boot, PostgreSQL, MongoDB, Redis, with deployment experience using Docker, GitHub Actions, Nginx, and AWS EC2.
         </p>
       </div>
     </div>

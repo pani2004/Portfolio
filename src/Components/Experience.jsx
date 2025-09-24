@@ -12,6 +12,8 @@ import aws from '../assets/aws.png'
 import kafka from '../assets/kafka.png'
 import Nginx from '../assets/Nginx.png'
 import Redis from '../assets/redis.png'
+import docker from '../assets/docker.jpeg'
+import Spring from '../assets/Spring.jpeg'
 const Experience = () => {
     const techs = [
         {
@@ -91,6 +93,18 @@ const Experience = () => {
             src:Redis,
             title:'Redis',
             style:'shadow-red-500'
+        },
+        {
+            id:14,
+            src:docker,
+            title:'Docker',
+            style:'shadow-blue-500'
+        },
+        {
+            id:15,
+            src:Spring,
+            title:'Spring Boot',
+            style:'shadow-green-600'
         }
     ]
 

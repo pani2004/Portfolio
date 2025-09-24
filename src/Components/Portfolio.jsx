@@ -1,8 +1,8 @@
 import React from 'react'
-import currency from "../assets/currency.png"
-import password from "../assets/password.png"
-import todolist from "../assets/todolist.png"
-import Weather from "../assets/Weather.png"
+import Market from "../assets/Market.jpeg"
+import Commet from "../assets/Commet.jpeg"
+import Ai from "../assets/Ai.jpeg"
+import Patient from "../assets/Patient.jpeg"
 import img from "../assets/img.png"
 import amazon from "../assets/amazon.png"
 import video from "../assets/video.jpeg"
@@ -13,63 +13,63 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: currency,
-            codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/CurrencyConverter',
-            demoLink: 'https://web-dev-projects-m9fvj4r02-debashis-projects-5a7f94cf.vercel.app'
+            src: Market,
+            codeLink: 'https://github.com/pani2004/Market-Explorer',
+            demoLink: '#'
         },
         {
             id: 2,
-            src: password,
-            codeLink: 'https://github.com/pani2004/PasswordGenerator',
-            demoLink: 'https://password-generator-git-master-debashis-projects-5a7f94cf.vercel.app'
+            src: Commet,
+            codeLink: 'https://github.com/pani2004/Comment_App',
+            demoLink: '#'
         },
         {
             id: 3,
-            src: todolist,
-            codeLink: 'https://github.com/pani2004/ToDoList',
-            demoLink: 'https://to-do-list-g619qf80h-debashis-projects-5a7f94cf.vercel.app',
+            src: Ai,
+            codeLink: 'https://github.com/pani2004/AI-Voice-Calling',
+            demoLink: '#'
         },
         {
             id: 4,
-            src: Weather,
-            codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/Weather%20App',
-            demoLink: 'https://web-dev-projects-6qhw-fh97kelwu-debashis-projects-5a7f94cf.vercel.app'
+            src: Patient,
+            codeLink: 'https://github.com/pani2004/Patient-Management-System',
+            demoLink: '#'
         },
         {
             id: 5,
+            src: home,
+            codeLink: 'https://github.com/pani2004/Mern-Estate',
+            demoLink: 'https://mern-estate-932i.onrender.com'
+        },
+        {
+            id: 6,
+            src: video,
+            codeLink: 'https://github.com/pani2004/BackendProject',
+            demoLink: '#'
+        },
+        {
+            id: 7,
+            src: WebScraping,
+            codeLink: 'https://github.com/pani2004/Price-Automation',
+            demoLink: '#'
+        },
+        {
+            id: 8,
+            src: Pacs,
+            codeLink:'https://github.com/SkyPacs/Pacs',
+            demoLink: 'https://skypacs.in/'
+        },
+        {
+            id: 9,
             src: img,
             codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/Study%20Sync',
             demoLink: 'https://study-sync-3f2s4tiyh-debashis-projects-5a7f94cf.vercel.app'
         },
         {
-            id: 6,
+            id: 10,
             src: amazon,
             codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/AmzoneClone',
             demoLink: 'https://web-dev-projects-oj5y-opp2v7bt5-debashis-projects-5a7f94cf.vercel.app'
-        },
-        {
-            id:7,
-            src:home,
-            codeLink:'https://github.com/pani2004/Mern-Estate',
-            demoLink:'https://mern-estate-932i.onrender.com'
-        },
-        {
-            id:8,
-            src:video,
-            codeLink:'https://github.com/pani2004/BackendProject',
-            demoLink:'#'
-        },
-        {
-            id:9,
-            src:WebScraping,
-            codeLink:'https://github.com/pani2004/Price-Automation',
-            demoLink:'#'
-        },
-        {
-           id:10,
-           src:Pacs,
-        //    codeLink:'Coming soon to a GitHub repository near you',
-           demoLink:'https://skypacs.in/'
         }
         
     ]
