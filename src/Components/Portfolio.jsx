@@ -75,25 +75,25 @@ const Portfolio = () => {
     ]
 
     return (
-        <div name="Portfolio" id="Portfolio" className="bg-gradient-to-b from-gray-800 to-black w-full text-white">
+        <div name="Portfolio" id="Portfolio" className="bg-gradient-to-b from-gray-800 to-black w-full text-white min-h-screen py-20">
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
                         Portfolio
                     </p>
-                    <p className='py-6'>Check out some of my work right here</p>
+                    <p className='py-6 text-base md:text-lg'>Check out some of my work right here</p>
                 </div>
 
-                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-0'>
                     {portfolios.map(({ id, src, codeLink, demoLink }) => (
-                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                            <img src={src} alt="" className='rounded-md duration-200 hover:scale-105 w-full h-48 object-cover' />
+                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg overflow-hidden'>
+                            <img src={src} alt="" className='rounded-t-md duration-200 hover:scale-105 w-full h-40 sm:h-48 object-cover' />
                             <div className='flex justify-center items-center'>
-                                <a href={demoLink} target="_blank" rel="noreferrer" className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center'>
-                                    <button>Demo</button>
+                                <a href={demoLink} target="_blank" rel="noreferrer" className='w-1/2 px-4 py-2 md:px-6 md:py-3 m-2 md:m-4 duration-200 hover:scale-105 text-center'>
+                                    <button className='text-sm md:text-base'>Demo</button>
                                 </a>
-                                <a href={codeLink} target="_blank" rel="noreferrer" className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center'>
-                                    <button>Code</button>
+                                <a href={codeLink} target="_blank" rel="noreferrer" className='w-1/2 px-4 py-2 md:px-6 md:py-3 m-2 md:m-4 duration-200 hover:scale-105 text-center'>
+                                    <button className='text-sm md:text-base'>Code</button>
                                 </a>
                             </div>
                         </div>

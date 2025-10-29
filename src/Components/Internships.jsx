@@ -33,41 +33,41 @@ const Internships = () => {
     ];
 
     return (
-        <div name="Internships" id="Internships" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-20">
+        <div name="Internships" id="Internships" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-20 min-h-screen">
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
                         Internships
                     </p>
-                    <p className='py-6'>Professional experience gained through impactful internships</p>
+                    <p className='py-6 text-base md:text-lg'>Professional experience gained through impactful internships</p>
                 </div>
 
-                <div className='grid gap-8 md:gap-12'>
+                <div className='grid gap-6 md:gap-12'>
                     {internships.map(({ id, company, role, duration, description, techStack, type }) => (
-                        <div key={id} className='bg-gray-900 rounded-lg p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-700'>
-                            <div className='mb-6'>
+                        <div key={id} className='bg-gray-900 rounded-lg p-4 md:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-700'>
+                            <div className='mb-4 md:mb-6'>
                                 <div className='flex flex-col md:flex-row md:justify-between md:items-start mb-2'>
-                                    <h3 className='text-2xl font-bold text-blue-400'>{company}</h3>
-                                    <span className='text-gray-400 text-sm mt-1 md:mt-0'>{type}</span>
+                                    <h3 className='text-xl md:text-2xl font-bold text-blue-400'>{company}</h3>
+                                    <span className='text-gray-400 text-xs md:text-sm mt-1 md:mt-0'>{type}</span>
                                 </div>
-                                <h4 className='text-xl text-gray-300 mb-2'>{role}</h4>
-                                <p className='text-gray-500'>{duration}</p>
+                                <h4 className='text-lg md:text-xl text-gray-300 mb-2'>{role}</h4>
+                                <p className='text-gray-500 text-sm md:text-base'>{duration}</p>
                             </div>
 
-                            <div className='mb-6'>
-                                <h5 className='text-lg font-semibold mb-3 text-gray-200'>Key Responsibilities & Achievements:</h5>
+                            <div className='mb-4 md:mb-6'>
+                                <h5 className='text-base md:text-lg font-semibold mb-3 text-gray-200'>Key Responsibilities & Achievements:</h5>
                                 <ul className='list-disc list-inside space-y-2'>
                                     {description.map((item, index) => (
-                                        <li key={index} className='text-gray-300 leading-relaxed'>{item}</li>
+                                        <li key={index} className='text-sm md:text-base text-gray-300 leading-relaxed'>{item}</li>
                                     ))}
                                 </ul>
                             </div>
 
                             <div>
-                                <h5 className='text-lg font-semibold mb-3 text-gray-200'>Technologies Used:</h5>
+                                <h5 className='text-base md:text-lg font-semibold mb-3 text-gray-200'>Technologies Used:</h5>
                                 <div className='flex flex-wrap gap-2'>
                                     {techStack.map((tech, index) => (
-                                        <span key={index} className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-500 transition-colors duration-200'>
+                                        <span key={index} className='bg-blue-600 text-white px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium hover:bg-blue-500 transition-colors duration-200'>
                                             {tech}
                                         </span>
                                     ))}
