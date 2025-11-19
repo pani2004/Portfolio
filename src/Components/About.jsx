@@ -22,7 +22,7 @@ const About = () => {
         </p>
         <br />
         <p className="text-base md:text-xl">
-          Additionally, I developed SKYPACS, a PACS system for DICOM medical images deployed on my home server using Docker, Nginx, GitHub Actions, and AWS EC2. Other MERN stack projects include a real estate platform, Market Scout (price comparison engine), and a commenting system. My core skills include Node.js, Express.js, React, Spring Boot, PostgreSQL, MongoDB, Redis, with deployment experience using Docker, GitHub Actions, Nginx, and AWS EC2.
+          Additionally, I developed SKYPACS, a PACS system for DICOM medical images deployed on my home server using Docker, Nginx, GitHub Actions. Other MERN stack projects include a real estate platform, Market Scout (price comparison engine), and a commenting system. My core skills include Node.js, Express.js, React, Spring Boot, PostgreSQL, MongoDB, Redis, with deployment experience using Docker, GitHub Actions, Nginx, and AWS EC2.
         </p>
       </div>
     </div>
