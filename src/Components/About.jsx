@@ -18,7 +18,7 @@ const About = () => {
         </p>
         <br />
         <p className="text-base md:text-xl">
-          As the Tech Lead and Grand Finalist at Smart India Hackathon 2024, I led a team to build Market Scout, a scalable price comparison platform leveraging Redis caching and Playwright scraping. I've also built a Patient Management System in microservice architecture using Spring Boot, gRPC, Kafka, Docker, and PostgreSQL, implementing modular services for patient records, billing, and analytics.
+          As the Tech Lead and Winner at Smart India Hackathon 2025, I led a team to build a fully offline, multimodal RAG-based AI system, focusing on backend pipelines, vector search, and reliable retrieval under strict time constraints. I've also built a Patient Management System in microservice architecture using Spring Boot, gRPC, Kafka, Docker, and PostgreSQL, implementing modular services for patient records, billing, and analytics.
         </p>
         <br />
         <p className="text-base md:text-xl">
