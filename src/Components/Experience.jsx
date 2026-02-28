@@ -24,113 +24,149 @@ const Experience = () => {
             id: 1,
             src: html,
             title: 'HTML',
-            style: 'shadow-orange-500'
+            style: 'shadow-orange-500',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 2,
             src: javascript,
             title: 'JavaScript',
-            style: 'shadow-yellow-500'
+            style: 'shadow-yellow-500',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 3,
             src: reactImage,
             title: 'React',
-            style: 'shadow-blue-600'
+            style: 'shadow-blue-600',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 4,
             src: tailwind,
             title: 'Tailwind',
-            style: 'shadow-sky-400'
+            style: 'shadow-sky-400',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         // Backend Technologies
         {
             id: 5,
             src: node,
             title: 'NodeJs',
-            style: 'shadow-green-400'
+            style: 'shadow-green-400',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 6,
             src: express,
             title: 'ExpressJs',
-            style: 'shadow-gray-500'
+            style: 'shadow-gray-500',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 7,
             src: fastapi,
             title: 'FastAPI',
-            style: 'shadow-teal-500'
+            style: 'shadow-teal-500',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         {
             id: 8,
             src: Spring,
             title: 'Spring Boot',
-            style: 'shadow-green-600'
+            style: 'shadow-green-600',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         // Databases
         {
             id: 9,
             src: mongo,
             title: 'MongoDB',
-            style: 'shadow-green-500'
+            style: 'shadow-green-500',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 10,
             src: Postgres,
             title: 'PostgreSQL',
-            style: 'shadow-blue-400'
+            style: 'shadow-blue-400',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 11,
             src: Redis,
             title: 'Redis',
-            style: 'shadow-red-500'
+            style: 'shadow-red-500',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         // DevOps & Tools
         {
             id: 12,
             src: docker,
             title: 'Docker',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 13,
             src: kafka,
             title: 'Kafka',
-            style: 'shadow-gray-500'
+            style: 'shadow-gray-500',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         {
             id: 14,
             src: Nginx,
             title: 'Nginx',
-            style: 'shadow-green-500'
+            style: 'shadow-green-500',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         {
             id: 15,
             src: aws,
             title: 'AWS',
-            style: 'shadow-yellow-500'
+            style: 'shadow-yellow-500',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         },
         {
             id: 16,
             src: Github,
             title: 'GitHub',
-            style: 'shadow-gray-400'
+            style: 'shadow-gray-400',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         // Programming Languages
         {
             id: 17,
             src: cpp,
             title: 'C++',
-            style: 'shadow-blue-800'
+            style: 'shadow-blue-800',
+            level: 'Advanced',
+            color: 'text-green-400'
         },
         {
             id: 18,
             src: java,
             title: 'Java',
-            style: 'shadow-red-600'
+            style: 'shadow-red-600',
+            level: 'Intermediate',
+            color: 'text-blue-400'
         }
     ]
 
@@ -143,10 +179,12 @@ const Experience = () => {
                 </div>
 
                 <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 text-center py-8 px-4 sm:px-0'>
-                    {techs.map(({ id, src, title, style }) => (
-                        <div key={id} className={`shadow-md hover:scale-105 duration-500 py-4 md:py-2 rounded-lg ${style}`}>
+                    {techs.map(({ id, src, title, style, level, color }) => (
+                        <div key={id} className={`bg-gray-900 shadow-md hover:scale-105 duration-500 py-4 md:py-6 rounded-lg ${style} relative group`}>
                             <img src={src} alt={title} className='w-16 md:w-20 mx-auto' />
-                            <p className='mt-2 md:mt-4 text-sm md:text-base'>{title}</p>
+                            <p className='mt-2 md:mt-4 text-sm md:text-base font-semibold'>{title}</p>
+                            <span className={`text-xs ${color} font-medium mt-1 block`}>{level}</span>
+                            <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
                         </div>
                     ))}
                 </div>
