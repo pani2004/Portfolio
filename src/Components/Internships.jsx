@@ -4,8 +4,22 @@ const Internships = () => {
     const internships = [
         {
             id: 1,
+            company: "Dfy-Graviti",
+            role: "SDE Intern",
+            duration: "Jan 2026 – Present",
+            description: [
+                "Working on scaling a geospatial system with a focus on performance, reliability, and large-scale data handling",
+                "Developing and maintaining backend services using Django and Laravel with PostgreSQL",
+                "Containerizing and deploying services using Docker on Linux-based infrastructure",
+                "Building frontend components and dashboards using Vue.js"
+            ],
+            techStack: ["Django", "Laravel", "PostgreSQL", "Docker", "Linux", "Vue.js"],
+            type: "Delhi, India (On-site)"
+        },
+        {
+            id: 2,
             company: "NTRO (National Technical Research Organisation)",
-            role: "Full Stack Developer Intern",
+            role: "SDE Intern",
             duration: "May 14 – Aug 20, 2025",
             description: [
                 "Developed high-security backend systems under strict NDA guidelines",
@@ -15,20 +29,6 @@ const Internships = () => {
             ],
             techStack: ["React", "FastAPI", "Laravel", "PostgreSQL", "Docker"],
             type: "Delhi, India (On-site)"
-        },
-        {
-            id: 2,
-            company: "Remodel AI",
-            role: "Backend Developer Intern",
-            duration: "Feb 2025 – Apr 2025",
-            description: [
-                "Developed a real-time AI voice communication platform using OpenAI APIs",
-                "Implemented WebSocket connections for low-latency voice streaming",
-                "Integrated Twilio APIs for reliable voice communication infrastructure",
-                "Built scalable backend systems handling concurrent voice sessions"
-            ],
-            techStack: ["OpenAI APIs", "WebSockets", "Twilio", "Node.js", "Express.js"],
-            type: "Remote"
         }
     ];
 
