@@ -15,18 +15,22 @@ const Navbar = () => {
     },
     {
       id: 3,
-      link: 'Internships'
+      link: 'Achievements'
     },
     {
       id: 4,
-      link: 'Portfolio'
+      link: 'Internships'
     },
     {
       id: 5,
-      link: 'Experience'
+      link: 'Portfolio'
     },
     {
       id: 6,
+      link: 'Experience'
+    },
+    {
+      id: 7,
       link: 'Contact'
     },
   ]
@@ -36,7 +40,7 @@ const Navbar = () => {
       <div>
         <h1 className='text-3xl sm:text-4xl md:text-5xl font-signature ml-2'>Debashis</h1>
       </div>
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex items-center'>
         {links.map(({ id, link }) => (
           <li key={id} className='px-3 lg:px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 duration-200 text-sm lg:text-base'>
             <Link to={link} smooth duration={500}>{link}</Link>
