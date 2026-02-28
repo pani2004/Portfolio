@@ -10,19 +10,19 @@ const About = () => {
           </p>
         </div>
         <p className="text-base md:text-xl mt-4">
-          I'm Debashis Pani, a backend-focused full-stack developer passionate about building scalable and meaningful software systems. I'm currently pursuing a B.Tech in Information Technology at KIIT, graduating in 2026, and have gained hands-on experience through impactful internships and national-level hackathons.
+          I'm Debashis Pani, a backend-focused software developer passionate about building scalable and meaningful systems. Currently pursuing B.Tech in Information Technology at KIIT (graduating 2026), with hands-on experience through high-impact internships and national-level hackathons.
         </p>
         <br />
         <p className="text-base md:text-xl">
-          During my internship at Remodel AI, I worked on a real-time AI voice communication platform using OpenAI APIs, WebSockets, and Twilio, gaining practical experience in building reliable, low-latency backend systems. At NTRO, I was involved in full-stack development using React, FastAPI, Laravel, PostgreSQL, and Docker for a high-security backend project under a strict NDA.
+          Currently working at Dfy-Graviti as an SDE Intern, scaling geospatial systems with focus on performance and reliability using Django, Laravel, PostgreSQL, and Docker on Linux infrastructure. Previously at NTRO, I developed high-security full-stack applications using React, FastAPI, Laravel, and PostgreSQL under strict NDA guidelines.
         </p>
         <br />
         <p className="text-base md:text-xl">
-          As the Tech Lead and Winner at Smart India Hackathon 2025, I led a team to build a fully offline, multimodal RAG-based AI system, focusing on backend pipelines, vector search, and reliable retrieval under strict time constraints. I've also built a Patient Management System in microservice architecture using Spring Boot, gRPC, Kafka, Docker, and PostgreSQL, implementing modular services for patient records, billing, and analytics.
+          As Tech Lead and National Winner at Smart India Hackathon 2025, I architected a fully offline multimodal RAG-based AI system with vector search and optimized retrieval pipelines. Built a microservices Patient Management System using Spring Boot, gRPC, Kafka, and PostgreSQL, and developed SKYPACS—a self-hosted DICOM medical imaging system with CI/CD automation.
         </p>
         <br />
         <p className="text-base md:text-xl">
-          Additionally, I developed SKYPACS, a PACS system for DICOM medical images deployed on my home server using Docker, Nginx, GitHub Actions. Other MERN stack projects include a real estate platform, Market Scout (price comparison engine), and a commenting system. My core skills include Node.js, Express.js, React, Spring Boot, PostgreSQL, MongoDB, Redis, with deployment experience using Docker, GitHub Actions, Nginx, and AWS EC2.
+          Core expertise: Node.js, Express, React, Vue.js, Spring Boot, Django, Laravel, PostgreSQL, MongoDB, Redis, Kafka. DevOps stack: Docker, GitHub Actions, Nginx, AWS EC2. Passionate about system design, distributed systems, and building production-grade applications.
         </p>
       </div>
     </div>
