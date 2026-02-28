@@ -13,6 +13,7 @@ import Email from "../assets/Email.png"
 
 const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [activeFilter, setActiveFilter] = useState('All');
 
     const portfolios = [
         {
@@ -23,7 +24,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "A modern, interactive financial market calendar application built with React and Redux, featuring real-time Binance trading data visualization and comprehensive export capabilities..",
             tech: ["React", "Redux", "TailwindCss", "Binance Api"],
-            highlights: [ "Real-time price tracking", ]
+            highlights: [ "Real-time price tracking", ],
+            category: "Full Stack"
         },
         {
             id: 'onebox-email',
@@ -33,7 +35,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "AI-powered email aggregator with real-time IMAP synchronization. Features intelligent email classification using Google Gemini AI, RAG-based reply suggestions with ChromaDB, and Elasticsearch integration.",
             tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Elasticsearch", "ChromaDB", "Gemini AI"],
-            highlights: ["Real-time IMAP IDLE", "AI Classification", "Vector-based RAG system", "Slack integration"]
+            highlights: ["Real-time IMAP IDLE", "AI Classification", "Vector-based RAG system", "Slack integration"],
+            category: "AI/ML"
         },
         {
             id: 'ai-voice',
@@ -43,7 +46,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "Real-time AI voice communication platform using OpenAI APIs. Built during internship at Remodel AI with WebSocket connections for low-latency voice streaming and Twilio integration.",
             tech: ["OpenAI API", "WebSockets", "Twilio", "Node.js", "Express"],
-            highlights: ["Real-time voice streaming", "Low-latency architecture", "Twilio integration"]
+            highlights: ["Real-time voice streaming", "Low-latency architecture", "Twilio integration"],
+            category: "AI/ML"
         },
         {
             id: 'patient-mgmt',
@@ -53,7 +57,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "Microservice architecture system built with Spring Boot. Features modular services for patient records, billing, and analytics using gRPC for inter-service communication and Kafka for event streaming.",
             tech: ["Spring Boot", "gRPC", "Kafka", "Docker", "PostgreSQL"],
-            highlights: ["Microservice architecture", "Event-driven design", "gRPC communication", "Dockerized deployment"]
+            highlights: ["Microservice architecture", "Event-driven design", "gRPC communication", "Dockerized deployment"],
+            category: "Backend"
         },
         {
             id: 'mern-estate',
@@ -63,7 +68,8 @@ const Portfolio = () => {
             demoLink: 'https://mern-estate-932i.onrender.com',
             description: "Full-stack real estate platform with property listings, user authentication, and advanced search filters. Features image upload, property management, and responsive design.",
             tech: ["MongoDB", "Express", "React", "Node.js", "JWT"],
-            highlights: ["Full CRUD operations", "Image upload", "JWT authentication", "Advanced search filters"]
+            highlights: ["Full CRUD operations", "Image upload", "JWT authentication", "Advanced search filters"],
+            category: "Full Stack"
         },
         {
             id: 'video-streaming',
@@ -73,7 +79,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "A comprehensive video streaming backend with user authentication, video upload, likes, comments, and subscriptions. Features robust API design and efficient video processing.",
             tech: ["Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
-            highlights: ["Video processing", "User subscriptions", "Comment system", "Secure authentication"]
+            highlights: ["Video processing", "User subscriptions", "Comment system", "Secure authentication"],
+            category: "Backend"
         },
         {
             id: 'price-scraper',
@@ -83,7 +90,8 @@ const Portfolio = () => {
             demoLink: '#',
             description: "Automated web scraping tool for price monitoring across multiple e-commerce platforms. Features scheduled scraping, price alerts, and data visualization.",
             tech: ["Python", "Selenium", "BeautifulSoup", "Pandas", "MongoDB"],
-            highlights: ["Multi-site scraping", "Automated scheduling", "Price tracking", "Data analytics"]
+            highlights: ["Multi-site scraping", "Automated scheduling", "Price tracking", "Data analytics"],
+            category: "Backend"
         },
         {
             id: 'skypacs',
@@ -93,7 +101,8 @@ const Portfolio = () => {
             demoLink: 'https://skypacs.in/',
             description: "PACS system for DICOM medical image management deployed on home server. Features secure image storage, viewer integration, and automated deployment with Docker and GitHub Actions.",
             tech: ["Docker", "Nginx", "PostgreSQL", "GitHub Actions", "AWS EC2", "DICOM"],
-            highlights: ["Medical image processing", "Self-hosted deployment", "CI/CD pipeline", "DICOM standard"]
+            highlights: ["Medical image processing", "Self-hosted deployment", "CI/CD pipeline", "DICOM standard"],
+            category: "DevOps"
         },
         {
             id: 'study-sync',
@@ -103,7 +112,8 @@ const Portfolio = () => {
             demoLink: 'https://study-sync-3f2s4tiyh-debashis-projects-5a7f94cf.vercel.app',
             description: "Educational platform for study resource management with course listings, user dashboard, and interactive learning features. Clean UI with modern design principles.",
             tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-            highlights: ["Responsive design", "Interactive UI", "Course management", "User dashboard"]
+            highlights: ["Responsive design", "Interactive UI", "Course management", "User dashboard"],
+            category: "Frontend"
         },
         {
             id: 'amazon-clone',
@@ -113,10 +123,16 @@ const Portfolio = () => {
             demoLink: 'https://web-dev-projects-oj5y-opp2v7bt5-debashis-projects-5a7f94cf.vercel.app',
             description: "E-commerce UI clone replicating Amazon's interface with product listings, cart functionality, and responsive design. Focus on frontend development and UI/UX principles.",
             tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-            highlights: ["Pixel-perfect UI", "Shopping cart", "Product grid layout", "Mobile responsive"]
+            highlights: ["Pixel-perfect UI", "Shopping cart", "Product grid layout", "Mobile responsive"],
+            category: "Frontend"
         }
         
     ]
+
+    const categories = ['All', 'Full Stack', 'Backend', 'Frontend', 'AI/ML', 'DevOps'];
+    const filteredProjects = activeFilter === 'All' 
+        ? portfolios 
+        : portfolios.filter(project => project.category === activeFilter);
 
     return (
         <div name="Portfolio" id="Portfolio" className="bg-gradient-to-b from-gray-800 to-black w-full text-white min-h-screen py-20">
@@ -144,8 +160,28 @@ const Portfolio = () => {
                     <p className='py-6 text-base md:text-lg'>Check out some of my work right here</p>
                 </div>
 
+                {/* Filter Buttons */}
+                <div className='flex flex-wrap gap-3 mb-8 justify-center'>
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => {
+                                setActiveFilter(category);
+                                setSelectedProject(null);
+                            }}
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                                activeFilter === category
+                                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg scale-105'
+                                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:scale-105'
+                            }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-0'>
-                    {portfolios.map((portfolio) => {
+                    {filteredProjects.map((portfolio) => {
                         const isExpanded = selectedProject === portfolio.id;
                         return (
                         <div 
