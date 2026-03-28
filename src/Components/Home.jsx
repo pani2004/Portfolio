@@ -31,9 +31,6 @@ const Home = () => {
                     </a>
                 </div>
             </div>
-            <div className='w-full md:w-auto flex justify-center'>
-                <img src={hero} alt="my profile" className='rounded-2xl w-2/3 sm:w-1/2 md:w-full max-w-sm'/>
-            </div>
         </div>
     </div>
   )
