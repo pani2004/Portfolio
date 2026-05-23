@@ -10,6 +10,7 @@ import home from "../assets/home.jpeg"
 import Pacs from "../assets/Pacs.png"
 import WebScraping from "../assets/WebScraping.png"
 import Email from "../assets/Email.png"
+import Codelens from "../assets/Codelens.jpg"
 
 const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -17,15 +18,15 @@ const Portfolio = () => {
 
     const portfolios = [
         {
-            id: 'market-scout',
-            title: "Market Scout",
-            src: Market,
-            codeLink: 'https://github.com/pani2004/Market-Explorer',
+            id: 'codelens-ai',
+            title: "CodeLens AI",
+            src: Codelens,
+            codeLink: 'https://github.com/pani2004/CodeLens',
             demoLink: '#',
-            description: "A modern, interactive financial market calendar application built with React and Redux, featuring real-time Binance trading data visualization and comprehensive export capabilities..",
-            tech: ["React", "Redux", "TailwindCss", "Binance Api"],
-            highlights: [ "Real-time price tracking", ],
-            category: "Full Stack"
+            description: "AI-powered codebase analysis and understanding tool. Chat with repositories using Google Gemini, semantic search with pgvector, and interactive graph visualization.",
+            tech: ["FastAPI", "Next.js", "PostgreSQL", "pgvector", "React", "ReactFlow", "GitHub OAuth", "Google Gemini"],
+            highlights: ["AI-powered code analysis (Gemini)", "Vector semantic search with pgvector", "Interactive dependency graphs with ReactFlow", "GitHub OAuth and persistent chats"],
+            category: "AI/ML"
         },
         {
             id: 'onebox-email',
@@ -50,15 +51,15 @@ const Portfolio = () => {
             category: "AI/ML"
         },
         {
-            id: 'patient-mgmt',
-            title: "Patient Management System",
-            src: Patient,
-            codeLink: 'https://github.com/pani2004/Patient-Management-System',
+            id: 'market-scout',
+            title: "Market Scout",
+            src: Market,
+            codeLink: 'https://github.com/pani2004/Market-Explorer',
             demoLink: '#',
-            description: "Microservice architecture system built with Spring Boot. Features modular services for patient records, billing, and analytics using gRPC for inter-service communication and Kafka for event streaming.",
-            tech: ["Spring Boot", "gRPC", "Kafka", "Docker", "PostgreSQL"],
-            highlights: ["Microservice architecture", "Event-driven design", "gRPC communication", "Dockerized deployment"],
-            category: "Backend"
+            description: "Market Scout is a price comparison engine built during SIH 2024. It reduces search time using Playwright scraping and Redis caching, with a MERN-based full-stack architecture.",
+            tech: ["MongoDB", "Express", "React", "Node.js", "Playwright", "Redis"],
+            highlights: ["40% faster search with Redis caching", "Playwright-based scrapers", "MERN full-stack architecture"],
+            category: "Full Stack"
         },
         {
             id: 'mern-estate',
@@ -70,6 +71,17 @@ const Portfolio = () => {
             tech: ["MongoDB", "Express", "React", "Node.js", "JWT"],
             highlights: ["Full CRUD operations", "Image upload", "JWT authentication", "Advanced search filters"],
             category: "Full Stack"
+        },
+        {
+            id: 'patient-mgmt',
+            title: "Patient Management System",
+            src: Patient,
+            codeLink: 'https://github.com/pani2004/Patient-Management-System',
+            demoLink: '#',
+            description: "Microservice architecture system built with Spring Boot. Features modular services for patient records, billing, and analytics using gRPC for inter-service communication and Kafka for event streaming.",
+            tech: ["Spring Boot", "gRPC", "Kafka", "Docker", "PostgreSQL"],
+            highlights: ["Microservice architecture", "Event-driven design", "gRPC communication", "Dockerized deployment"],
+            category: "Backend"
         },
         {
             id: 'video-streaming',
@@ -103,30 +115,7 @@ const Portfolio = () => {
             tech: ["Docker", "Nginx", "PostgreSQL", "GitHub Actions", "AWS EC2", "DICOM"],
             highlights: ["Medical image processing", "Self-hosted deployment", "CI/CD pipeline", "DICOM standard"],
             category: "DevOps"
-        },
-        {
-            id: 'study-sync',
-            title: "Study Sync Platform",
-            src: img,
-            codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/Study%20Sync',
-            demoLink: 'https://study-sync-3f2s4tiyh-debashis-projects-5a7f94cf.vercel.app',
-            description: "Educational platform for study resource management with course listings, user dashboard, and interactive learning features. Clean UI with modern design principles.",
-            tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-            highlights: ["Responsive design", "Interactive UI", "Course management", "User dashboard"],
-            category: "Frontend"
-        },
-        {
-            id: 'amazon-clone',
-            title: "Amazon Clone",
-            src: amazon,
-            codeLink: 'https://github.com/pani2004/WebDev-Projects/tree/main/AmzoneClone',
-            demoLink: 'https://web-dev-projects-oj5y-opp2v7bt5-debashis-projects-5a7f94cf.vercel.app',
-            description: "E-commerce UI clone replicating Amazon's interface with product listings, cart functionality, and responsive design. Focus on frontend development and UI/UX principles.",
-            tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-            highlights: ["Pixel-perfect UI", "Shopping cart", "Product grid layout", "Mobile responsive"],
-            category: "Frontend"
         }
-        
     ]
 
     const categories = ['All', 'Full Stack', 'Backend', 'Frontend', 'AI/ML', 'DevOps'];

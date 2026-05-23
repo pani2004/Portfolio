@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
 
 const GitHubStats = () => {
-    const githubUsername = "pani2004"; // Replace with actual username
+    const githubUsername = "pani2004"; 
 
     return (
         <div name="GitHub" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-20">
