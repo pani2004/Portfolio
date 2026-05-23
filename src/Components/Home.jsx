@@ -23,7 +23,7 @@ const Home = () => {
                         </span>
                     </Link>
                     <a 
-                        href="/resume.pdf" 
+                        href="/Resume.pdf" 
                         download="Debashis_Pani_Resume.pdf"
                         className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer text-sm md:text-base hover:scale-110 duration-300'
                     >
