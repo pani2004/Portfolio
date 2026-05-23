@@ -8,12 +8,12 @@ const Internships = () => {
             role: "SDE Intern",
             duration: "Jan 2026 – Present",
             description: [
-                "Working on scaling a geospatial system with a focus on performance, reliability, and large-scale data handling",
-                "Developing and maintaining backend services using Django and Laravel with PostgreSQL",
-                "Containerizing and deploying services using Docker on Linux-based infrastructure",
-                "Building frontend components and dashboards using Vue.js"
+                "Developing scalable backend systems for geospatial and real-time tracking using FastAPI, Django, Laravel, PostgreSQL, TimescaleDB, Docker, and Linux.",
+                "Managed and optimized TimescaleDB pipelines ingesting and processing 50M+ AIS records for real-time maritime tracking, reducing ingestion latency and improving query performance.",
+                "Orchestrated migration of 15+ backend APIs from Django and Laravel to FastAPI, improving API response times by ~40% and lowering server resource usage.",
+                "Designed and optimized REST APIs and backend workflows processing 1M+ database records, improving scalability, reducing query latency, and ensuring reliable high-volume data handling."
             ],
-            techStack: ["Django", "Laravel", "PostgreSQL", "Docker", "Linux", "Vue.js"],
+            techStack: ["FastAPI", "Django", "Laravel", "PostgreSQL", "TimescaleDB", "Docker", "Linux", "Vue.js"],
             type: "Delhi, India (On-site)"
         },
         {
