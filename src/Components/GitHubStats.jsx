@@ -1,36 +1,55 @@
 import React from 'react';
 import { FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
+import SectionHeading from './SectionHeading';
+import Reveal, { RevealStagger, RevealItem } from './Reveal';
+import CountUp from './CountUp';
 
 const GitHubStats = () => {
     const githubUsername = "pani2004"; 
 
+    const quickStats = [
+        { icon: <FaStar className='text-3xl text-yellow-400 mx-auto mb-2' />, value: '50+', label: 'Stars Earned', color: 'text-cyan-400', bg: 'from-cyan-900/60 to-blue-900/60 border-cyan-700/40' },
+        { icon: <FaCodeBranch className='text-3xl text-purple-400 mx-auto mb-2' />, value: '30+', label: 'Repositories', color: 'text-purple-400', bg: 'from-purple-900/60 to-pink-900/60 border-purple-700/40' },
+        { icon: <FaGithub className='text-3xl text-green-400 mx-auto mb-2' />, value: '500+', label: 'Contributions', color: 'text-green-400', bg: 'from-green-900/60 to-teal-900/60 border-green-700/40' },
+        { icon: <FaStar className='text-3xl text-orange-400 mx-auto mb-2' />, value: '10+', label: 'Projects', color: 'text-orange-400', bg: 'from-orange-900/60 to-red-900/60 border-orange-700/40' },
+    ];
+
     return (
-        <div name="GitHub" className="bg-gradient-to-b from-black to-gray-800 w-full text-white py-20">
-            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-                <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
-                        GitHub Stats
-                    </p>
-                    <p className='py-6 text-base md:text-lg'>My coding journey visualized</p>
-                </div>
+        <div name="GitHub" className="relative bg-gradient-to-b from-black to-gray-900 w-full text-white py-24 overflow-hidden">
+            <div className='absolute top-0 left-1/3 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl'></div>
+            <div className="relative max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+                <SectionHeading index="06" title="GitHub Stats" subtitle="My coding journey visualized." />
 
                 {/* GitHub Profile Link */}
-                <div className='mb-8 text-center'>
+                <Reveal className='mb-10 text-center'>
                     <a 
                         href={`https://github.com/${githubUsername}`}
                         target="_blank"
                         rel="noreferrer"
-                        className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300'
+                        className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg hover:scale-105 shadow-lg shadow-cyan-500/20 transition-transform duration-300'
                     >
                         <FaGithub size={24} />
                         <span className='font-semibold'>Visit My GitHub Profile</span>
                     </a>
-                </div>
+                </Reveal>
 
                 {/* GitHub Stats Cards */}
                 <div className='grid gap-6 md:gap-8'>
+                    {/* Quick Stats */}
+                    <RevealStagger className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+                        {quickStats.map((stat, i) => (
+                            <RevealItem key={i}>
+                                <div className={`bg-gradient-to-br ${stat.bg} rounded-xl p-4 text-center border hover:-translate-y-1 transition-transform duration-300`}>
+                                    {stat.icon}
+                                    <CountUp value={stat.value} className={`text-2xl font-bold ${stat.color}`} />
+                                    <p className='text-gray-300 text-sm'>{stat.label}</p>
+                                </div>
+                            </RevealItem>
+                        ))}
+                    </RevealStagger>
+
                     {/* Contribution Streak */}
-                    <div className='bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700'>
+                    <Reveal delay={0.1} className='bg-white/[0.04] rounded-xl p-6 shadow-xl border border-white/10'>
                         <h3 className='text-2xl font-bold mb-4 text-cyan-400'>Contribution Streak</h3>
                         <img 
                             src={`https://github-readme-streak-stats.herokuapp.com/?user=${githubUsername}&theme=radical&hide_border=true&background=1f2937&ring=06b6d4&fire=06b6d4&currStreakLabel=06b6d4`}
@@ -42,10 +61,10 @@ const GitHubStats = () => {
                                 e.target.parentElement.innerHTML += '<p class="text-gray-400 text-center py-4">Streak stats temporarily unavailable</p>';
                             }}
                         />
-                    </div>
+                    </Reveal>
 
                     {/* Activity Graph */}
-                    <div className='bg-gray-900 rounded-lg p-6 shadow-xl border border-gray-700'>
+                    <Reveal delay={0.15} className='bg-white/[0.04] rounded-xl p-6 shadow-xl border border-white/10'>
                         <h3 className='text-2xl font-bold mb-4 text-cyan-400'>Contribution Activity</h3>
                         <img 
                             src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react-dark&hide_border=true&bg_color=1f2937&color=06b6d4&line=06b6d4&point=ffffff`}
@@ -57,31 +76,7 @@ const GitHubStats = () => {
                                 e.target.parentElement.innerHTML += '<p class="text-gray-400 text-center py-4">Activity graph temporarily unavailable</p>';
                             }}
                         />
-                    </div>
-
-                    {/* Quick Stats */}
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-                        <div className='bg-gradient-to-br from-cyan-900 to-blue-900 rounded-lg p-4 text-center border border-cyan-700'>
-                            <FaStar className='text-3xl text-yellow-400 mx-auto mb-2' />
-                            <p className='text-2xl font-bold text-cyan-400'>50+</p>
-                            <p className='text-gray-300 text-sm'>Stars Earned</p>
-                        </div>
-                        <div className='bg-gradient-to-br from-purple-900 to-pink-900 rounded-lg p-4 text-center border border-purple-700'>
-                            <FaCodeBranch className='text-3xl text-purple-400 mx-auto mb-2' />
-                            <p className='text-2xl font-bold text-purple-400'>30+</p>
-                            <p className='text-gray-300 text-sm'>Repositories</p>
-                        </div>
-                        <div className='bg-gradient-to-br from-green-900 to-teal-900 rounded-lg p-4 text-center border border-green-700'>
-                            <FaGithub className='text-3xl text-green-400 mx-auto mb-2' />
-                            <p className='text-2xl font-bold text-green-400'>500+</p>
-                            <p className='text-gray-300 text-sm'>Contributions</p>
-                        </div>
-                        <div className='bg-gradient-to-br from-orange-900 to-red-900 rounded-lg p-4 text-center border border-orange-700'>
-                            <FaStar className='text-3xl text-orange-400 mx-auto mb-2' />
-                            <p className='text-2xl font-bold text-orange-400'>10+</p>
-                            <p className='text-gray-300 text-sm'>Projects</p>
-                        </div>
-                    </div>
+                    </Reveal>
                 </div>
             </div>
         </div>

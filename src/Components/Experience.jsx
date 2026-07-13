@@ -17,6 +17,9 @@ import Redis from '../assets/redis.png'
 import docker from '../assets/docker.jpeg'
 import Spring from '../assets/Spring.jpeg'
 import fastapi from '../assets/fastapi.png'
+import SectionHeading from './SectionHeading'
+import { RevealStagger, RevealItem } from './Reveal'
+
 const Experience = () => {
     const techs = [
         // Frontend Technologies
@@ -74,7 +77,7 @@ const Experience = () => {
             src: fastapi,
             title: 'FastAPI',
             style: 'shadow-teal-500',
-            level: 'Intermediate',
+            level: 'Advanced',
             color: 'text-blue-400'
         },
         {
@@ -132,7 +135,7 @@ const Experience = () => {
             src: Nginx,
             title: 'Nginx',
             style: 'shadow-green-500',
-            level: 'Intermediate',
+            level: 'Advanced',
             color: 'text-blue-400'
         },
         {
@@ -171,23 +174,22 @@ const Experience = () => {
     ]
 
     return (
-        <div name="Experience" id="Experience" className='bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-20'>
-            <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
-                <div>
-                    <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
-                    <p className='py-6 mt-2 text-base md:text-lg'>These are the Technologies I have worked with</p>
-                </div>
+        <div name="Experience" id="Experience" className='relative bg-gradient-to-b from-gray-900 to-black w-full min-h-screen py-24 overflow-hidden'>
+            <div className='absolute top-1/3 right-0 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl'></div>
+            <div className='relative max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
+                <SectionHeading index="05" title="Experience" subtitle="Technologies I've worked with, ranked by proficiency." />
 
-                <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 text-center py-8 px-4 sm:px-0'>
-                    {techs.map(({ id, src, title, style, level, color }) => (
-                        <div key={id} className={`bg-gray-900 shadow-md hover:scale-105 duration-500 py-4 md:py-6 rounded-lg ${style} relative group`}>
-                            <img src={src} alt={title} className='w-16 md:w-20 mx-auto' />
-                            <p className='mt-2 md:mt-4 text-sm md:text-base font-semibold'>{title}</p>
-                            <span className={`text-xs ${color} font-medium mt-1 block`}>{level}</span>
-                            <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
-                        </div>
+                <RevealStagger className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 text-center' staggerDelay={0.04}>
+                    {techs.map(({ id, src, title, level, color }) => (
+                        <RevealItem key={id}>
+                            <div className='bg-white/[0.04] border border-white/10 hover:border-cyan-400/30 hover:bg-white/[0.07] hover:-translate-y-1 duration-300 py-5 md:py-6 rounded-xl relative group'>
+                                <img src={src} alt={title} className='w-14 md:w-16 mx-auto drop-shadow-lg' />
+                                <p className='mt-3 md:mt-4 text-sm md:text-base font-semibold'>{title}</p>
+                                <span className={`text-xs ${color} font-medium mt-1 block`}>{level}</span>
+                            </div>
+                        </RevealItem>
                     ))}
-                </div>
+                </RevealStagger>
             </div>
         </div>
     )
