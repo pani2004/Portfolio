@@ -47,16 +47,16 @@ const SocialLinks = () => {
     ]
 
     return (
-        <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
+        <div className="hidden lg:flex flex-col top-[35%] left-0 fixed z-40">
             <ul>
                 {links.map(({ id, child, href, style, download }) => (
                     <li
                         key={id}
-                        className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] bg-gray-500 hover:rounded-md duration-300 ${style}`}
+                        className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-0 bg-white/5 backdrop-blur-md border border-white/10 border-l-0 hover:border-cyan-400/40 hover:bg-cyan-500/10 hover:rounded-md duration-300 ${style}`}
                     >
                         <a
                             href={href}
-                            className="flex justify-between items-center w-full text-white"
+                            className="flex justify-between items-center w-full text-gray-300 hover:text-cyan-300 transition-colors duration-200"
                             download={download}
                             target='_blank'
                             rel="noreferrer"
