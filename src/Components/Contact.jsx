@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { useToast } from './ToastProvider'
+import { motion } from 'framer-motion'
+import { HiOutlineMail } from 'react-icons/hi'
+import SectionHeading from './SectionHeading'
+import Reveal from './Reveal'
 
 const Contact = () => {
   const { addToast } = useToast();
@@ -74,52 +78,59 @@ const Contact = () => {
     }
   }
   return (
-    <div name='Contact' id="Contact" className='w-full min-h-screen bg-gradient-to-b from-gray-800 to-black p-4 text-white py-20'>
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">Contact</p>
-          <p className="py-6 text-base md:text-lg">Submit the form below to get in touch with me</p>
-        </div>
+    <div name='Contact' id="Contact" className='relative w-full min-h-screen bg-gradient-to-b from-gray-900 to-black p-4 text-white py-24 overflow-hidden'>
+      <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl'></div>
+      <div className="relative flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+        <SectionHeading index="07" title="Contact" subtitle="Have an opportunity or just want to say hi? Drop a message below." align="center" />
+
         <div className="flex justify-center items-center">
-          <form onSubmit={handleSubmit} className="flex flex-col w-full md:w-1/2">
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className={`p-3 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 ${errors.name ? 'border-red-500' : 'border-gray-500'}`}
-            />
-            {errors.name && <p className="text-red-500 text-sm mt-1">Name must be at least 2 characters</p>}
-            
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`p-3 my-4 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 ${errors.email ? 'border-red-500' : 'border-gray-500'}`}
-            />
-            {errors.email && <p className="text-red-500 text-sm mt-1">Please enter a valid email address</p>}
-            
-            <textarea
-              name="message"
-              placeholder="Enter Your Message"
-              rows="8"
-              value={formData.message}
-              onChange={handleChange}
-              className={`p-3 bg-transparent border-2 rounded-md text-white focus:outline-none focus:border-cyan-500 resize-none ${errors.message ? 'border-red-500' : 'border-gray-500'}`}
-            ></textarea>
-            {errors.message && <p className="text-red-500 text-sm mt-1">Message must be at least 10 characters</p>}
-            
-            <button 
-              type="submit" 
-              disabled={isSubmitting}
-              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center justify-center rounded-md hover:scale-110 duration-300 w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-            >
-              {isSubmitting ? 'Sending...' : "Let's Talk"}
-            </button>
-          </form>
+          <Reveal delay={0.1} className='w-full md:w-1/2'>
+            <form onSubmit={handleSubmit} className="flex flex-col bg-white/[0.03] border border-white/10 rounded-2xl p-6 md:p-8">
+              {/* <div className='flex items-center gap-2 mb-5 text-gray-400'>
+                <HiOutlineMail className='text-cyan-400' size={20} />
+              </div> */}
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className={`p-3 bg-black/30 border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200 ${errors.name ? 'border-red-500' : 'border-white/10'}`}
+              />
+              {errors.name && <p className="text-red-400 text-sm mt-1">Name must be at least 2 characters</p>}
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className={`p-3 my-4 bg-black/30 border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200 ${errors.email ? 'border-red-500' : 'border-white/10'}`}
+              />
+              {errors.email && <p className="text-red-400 text-sm mt-1">Please enter a valid email address</p>}
+
+              <textarea
+                name="message"
+                placeholder="Enter Your Message"
+                rows="6"
+                value={formData.message}
+                onChange={handleChange}
+                className={`p-3 bg-black/30 border rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 resize-none transition-all duration-200 ${errors.message ? 'border-red-500' : 'border-white/10'}`}
+              ></textarea>
+              {errors.message && <p className="text-red-400 text-sm mt-1">Message must be at least 10 characters</p>}
+
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                disabled={isSubmitting}
+                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 mt-6 flex items-center justify-center rounded-lg shadow-lg shadow-cyan-500/20 duration-300 w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : "Let's Talk"}
+              </motion.button>
+            </form>
+          </Reveal>
         </div>
       </div>
     </div>

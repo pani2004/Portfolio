@@ -1,5 +1,8 @@
 import React from 'react';
-import { FaTrophy, FaAward, FaMedal } from 'react-icons/fa';
+import { FaTrophy, FaMedal } from 'react-icons/fa';
+import SectionHeading from './SectionHeading';
+import Reveal, { RevealStagger, RevealItem } from './Reveal';
+import CountUp from './CountUp';
 
 const Achievements = () => {
     const achievements = [
@@ -37,80 +40,75 @@ const Achievements = () => {
         }
     ];
 
+    const stats = [
+        { value: '2', label: 'SIH Achievements', color: 'text-cyan-400', bg: 'from-cyan-900/60 to-blue-900/60' },
+        { value: '1', label: 'National Win', color: 'text-purple-400', bg: 'from-purple-900/60 to-pink-900/60' },
+        { value: '6', label: 'Team Members Led', color: 'text-green-400', bg: 'from-green-900/60 to-teal-900/60' },
+        { value: '98%', label: 'MVP Completion', color: 'text-orange-400', bg: 'from-orange-900/60 to-red-900/60' },
+    ];
+
     return (
-        <div name="Achievements" id="Achievements" className="bg-gradient-to-b from-gray-800 to-black w-full text-white py-20 min-h-screen">
-            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-                <div className='pb-8'>
-                    <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
-                        Achievements
-                    </p>
-                    <p className='py-6 text-base md:text-lg'>Recognition and accomplishments that drive my passion for technology</p>
-                </div>
+        <div name="Achievements" id="Achievements" className="relative bg-gradient-to-b from-black to-gray-900 w-full text-white py-24 min-h-screen overflow-hidden">
+            <div className='absolute bottom-0 left-0 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl'></div>
+            <div className="relative max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+                <SectionHeading index="02" title="Achievements" subtitle="Recognition and accomplishments that drive my passion for technology." />
 
-                <div className='grid gap-8 md:gap-12'>
+                <RevealStagger className='grid gap-6 md:gap-8'>
                     {achievements.map(({ id, title, subtitle, role, description, highlights, icon, date, color }) => (
-                        <div key={id} className='bg-gray-900 rounded-lg p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-gray-600'>
-                            <div className='flex flex-col md:flex-row gap-6'>
-                                {/* Icon Section */}
-                                <div className={`flex items-center justify-center bg-gradient-to-br ${color} rounded-lg p-4 md:p-6 h-fit`}>
-                                    {icon}
-                                </div>
-
-                                {/* Content Section */}
-                                <div className='flex-1'>
-                                    <div className='mb-4'>
-                                        <div className='flex flex-col md:flex-row md:justify-between md:items-start mb-2'>
-                                            <div>
-                                                <h3 className='text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400'>
-                                                    {title}
-                                                </h3>
-                                                <h4 className='text-xl md:text-2xl text-gray-300 mt-1'>{subtitle}</h4>
-                                            </div>
-                                            <span className='text-gray-400 text-sm md:text-base mt-2 md:mt-0 font-semibold'>{date}</span>
-                                        </div>
-                                        <p className='text-blue-400 text-base md:text-lg font-medium mt-2'>{role}</p>
+                        <RevealItem key={id}>
+                            <div className='group relative bg-white/[0.04] rounded-xl p-6 md:p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden'>
+                                <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-[0.06] transition-opacity duration-500`}></div>
+                                <div className='relative flex flex-col md:flex-row gap-6'>
+                                    <div className={`flex items-center justify-center bg-gradient-to-br ${color} rounded-lg p-4 md:p-6 h-fit shadow-lg`}>
+                                        {icon}
                                     </div>
 
-                                    <p className='text-gray-300 text-sm md:text-base leading-relaxed mb-4'>
-                                        {description}
-                                    </p>
+                                    <div className='flex-1'>
+                                        <div className='mb-4'>
+                                            <div className='flex flex-col md:flex-row md:justify-between md:items-start mb-2'>
+                                                <div>
+                                                    <h3 className='text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400'>
+                                                        {title}
+                                                    </h3>
+                                                    <h4 className='text-xl md:text-2xl text-gray-300 mt-1'>{subtitle}</h4>
+                                                </div>
+                                                <span className='text-gray-500 text-sm md:text-base mt-2 md:mt-0 font-mono'>{date}</span>
+                                            </div>
+                                            <p className='text-blue-400 text-base md:text-lg font-medium mt-2'>{role}</p>
+                                        </div>
 
-                                    <div className='mt-4'>
-                                        <h5 className='text-base md:text-lg font-semibold mb-3 text-gray-200'>Key Highlights:</h5>
-                                        <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-                                            {highlights.map((highlight, index) => (
-                                                <li key={index} className='flex items-start text-sm md:text-base text-gray-300'>
-                                                    <span className='text-green-400 mr-2'>✓</span>
-                                                    <span>{highlight}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <p className='text-gray-400 text-sm md:text-base leading-relaxed mb-4'>
+                                            {description}
+                                        </p>
+
+                                        <div className='mt-4'>
+                                            <h5 className='text-sm font-semibold mb-3 text-gray-500 uppercase tracking-wide'>Key Highlights</h5>
+                                            <ul className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+                                                {highlights.map((highlight, index) => (
+                                                    <li key={index} className='flex items-start text-sm md:text-base text-gray-300'>
+                                                        <span className='text-green-400 mr-2'>✓</span>
+                                                        <span>{highlight}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </RevealItem>
                     ))}
-                </div>
+                </RevealStagger>
 
-                {/* Stats Section */}
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-12'>
-                    <div className='bg-gradient-to-br from-cyan-900 to-blue-900 rounded-lg p-4 text-center'>
-                        <p className='text-3xl md:text-4xl font-bold text-cyan-400'>2</p>
-                        <p className='text-gray-300 text-sm md:text-base mt-2'>SIH Achievements</p>
-                    </div>
-                    <div className='bg-gradient-to-br from-purple-900 to-pink-900 rounded-lg p-4 text-center'>
-                        <p className='text-3xl md:text-4xl font-bold text-purple-400'>1</p>
-                        <p className='text-gray-300 text-sm md:text-base mt-2'>National Win</p>
-                    </div>
-                    <div className='bg-gradient-to-br from-green-900 to-teal-900 rounded-lg p-4 text-center'>
-                        <p className='text-3xl md:text-4xl font-bold text-green-400'>6</p>
-                        <p className='text-gray-300 text-sm md:text-base mt-2'>Team Members Led</p>
-                    </div>
-                    <div className='bg-gradient-to-br from-orange-900 to-red-900 rounded-lg p-4 text-center'>
-                        <p className='text-3xl md:text-4xl font-bold text-orange-400'>98%</p>
-                        <p className='text-gray-300 text-sm md:text-base mt-2'>MVP Completion</p>
-                    </div>
-                </div>
+                <RevealStagger className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-12'>
+                    {stats.map((stat, i) => (
+                        <RevealItem key={i}>
+                            <div className={`bg-gradient-to-br ${stat.bg} border border-white/10 rounded-xl p-5 text-center hover:-translate-y-1 transition-transform duration-300`}>
+                                <CountUp value={stat.value} className={`text-3xl md:text-4xl font-bold ${stat.color}`} />
+                                <p className='text-gray-400 text-sm md:text-base mt-2'>{stat.label}</p>
+                            </div>
+                        </RevealItem>
+                    ))}
+                </RevealStagger>
             </div>
         </div>
     );
